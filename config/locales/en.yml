@@ -1,0 +1,52 @@
+en:
+  activerecord:
+    attributes:
+      superhero:
+        name: Name
+        description: Description
+  main_menu:
+    superheroes: All superheros
+    add_superhero: Add superhero
+  superheroes:
+    create:
+      success: Superhero was created!
+    update:
+      success: Superhero was updated!
+    destroy:
+      success: Superhero was removed!
+    edit:
+      title: Edit
+    index:
+      title: All heroes
+      name: Name
+      description: Description
+      show: Show
+      edit: Edit
+      destroy: Remove
+      new: Add new
+    new:
+      title: New superhero
+    show:
+      title: Edit
+  global:
+    actions:
+      submit: Submit
+
+en:
+  activerecord:
+    attributes:
+      superhero:
+        name_en: Name (Eng)
+        description_eng: Description (Eng)
+        name_ru: Name (Rus)
+        description_ru: Description (Rus)
+
+en:
+  main_menu:
+    content_locale: Content language
+    locale: locale
+
+en:
+  main_menu:
+    search:
+      name: Find by name

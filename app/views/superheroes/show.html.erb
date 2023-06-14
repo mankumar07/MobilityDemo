@@ -1,0 +1,10 @@
+<p id="notice"><%= notice %></p>
+<h1>
+  <%= @superhero.name %>
+</h1>
+<p>
+  <%= @superhero.description %>
+</p>
+
+<%= link_to 'Edit', edit_superhero_path(@superhero) %> |
+<%= link_to 'Back', superheroes_path %>

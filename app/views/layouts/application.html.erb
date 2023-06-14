@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MobilityDemo</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%# <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div>
+      <%= form_with url: superheroes_path, method: :get do |f| %>
+        <%= f.text_field :name_q, value: params[:name_q], placeholder: t('main_menu.search.name'), required: true, minlength: 2 %>
+        <%= hidden_field_tag :content_locale, Mobility.locale %>
+        <%= f.submit t('global.actions.submit') %>
+      <% end %>
+    </div>
+    <%= yield %>
+    <ul>
+      <li><%= link_to t('main_menu.superheroes'), superheroes_path %></li>
+      <li><%= link_to t('main_menu.add_superhero'), new_superhero_path %></li>
+    </ul>
+    <p><%= t 'main_menu.content_locale' %></p>
+    <ul>
+      <li><%= link_to 'English', root_path(content_locale: :en) %></li>
+      <li><%= link_to 'Русский', root_path(content_locale: :ru) %></li>
+    </ul>
+
+    <p><%= t 'main_menu.locale' %></p>
+    <ul>
+      <li><%= link_to 'English', root_path(locale: :en) %></li>
+      <li><%= link_to 'Русский', root_path(locale: :ru) %></li>
+    </ul>
+  </body>
+</html>
